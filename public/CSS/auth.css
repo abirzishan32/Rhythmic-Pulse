@@ -1,3 +1,4 @@
+/* Existing CSS styles */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 * {
@@ -10,10 +11,10 @@
 body {
   min-height: 100vh;
   display: relative;
-  justify-content: flex-start; /* Aligns form to the left */
-  align-items: center; /* Aligns form vertically to the middle */
-  padding: 20px; /* Add padding for some space around the form */
-  overflow: hidden; /* Prevent scrolling */
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .welcomevid {
@@ -30,12 +31,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 form {
-  width: 500px; /* Adjust form width as needed */
-  margin: 50px 100px; /* Adjust margins for spacing */
+  width: 100%; /* Full width on small screens */
+  max-width: 500px; /* Maximum width on larger screens */
+  margin: 50px auto; /* Center the form horizontally */
+  padding: 0 20px; /* Padding on the sides */
 }
 
 form .input-box {
@@ -100,3 +102,51 @@ form .text h3 a {
 form .text h3 a:hover {
   text-decoration: underline;
 }
+
+/* Floating Login Form */
+.login-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: none;
+}
+
+.login-container {
+  text-align: center;
+}
+
+.login-container h3 {
+  margin-bottom: 20px;
+}
+
+.login-container .input-box {
+  margin: 10px 0;
+}
+
+.login-container .input-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-container .input-box button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container .input-box button:hover {
+  background: #0056b3;
+}
+
